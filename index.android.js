@@ -8,9 +8,13 @@ import { registerScreens } from './src/Screens';
 registerScreens();
 
 const navigatorStyle = {
+	statusBarColor: '#606B74',
 	statusBarTextColorScheme: 'dark',
   statusBarBlur: true,
-	navBarHidden: true
+	navBarHidden: true,
+	navBarTextColor: '#303841',
+	navBarBackgroundColor: '#FFFFFF',
+	navBarButtonColor: '#303841'
 };
 
 Navigation.startSingleScreenApp({
