@@ -1,18 +1,22 @@
 /* @flow */
 
-import React, { Component } from 'react';
-import {
-  AppRegistry
-} from 'react-native';
+import React from 'react';
 
-import App from './src/App';
+import { Navigation } from 'react-native-navigation';
+import { registerScreens } from './src/Screens';
 
-export default class bookie extends Component {
-  render() {
-    return (
-      <App />
-    );
+registerScreens();
+
+const navigatorStyle = {
+	statusBarTextColorScheme: 'dark',
+  statusBarBlur: true,
+	navBarHidden: true
+};
+
+Navigation.startSingleScreenApp({
+	screen: {
+		screen: 'bookie.Home',
+		title: 'Bookie',
+		navigatorStyle
   }
-}
-
-AppRegistry.registerComponent('bookie', () => bookie);
+});
