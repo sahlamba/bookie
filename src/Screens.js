@@ -6,6 +6,6 @@ import Home from './screens/Home';
 import Login from './screens/Login';
 
 export function registerScreens() {
-	Navigation.registerComponent('bookie.Home', () => Home);
-	Navigation.registerComponent('bookie.Login', () => Login);
+  Navigation.registerComponent('bookie.Home', () => Home);
+  Navigation.registerComponent('bookie.Login', () => Login);
 }

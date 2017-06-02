@@ -1,6 +1,7 @@
 /* @flow */
 
 import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import {
   View,
   Text,
@@ -14,15 +15,19 @@ import { ACCESS_TOKEN_KEY } from '../Config';
 export default class Login extends Component {
   static navigatorStyle = {
     statusBarColor: '#606B74',
-  	statusBarTextColorScheme: 'dark',
+    statusBarTextColorScheme: 'dark',
     statusBarBlur: true,
     navBarTextColor: '#303841',
-  	navBarBackgroundColor: '#FFFFFF',
+    navBarBackgroundColor: '#FFFFFF',
     navBarButtonColor: '#303841',
-  	navBarNoBorder: true,
-  	navBarSubtitleColor: '#606B74',
-  	navBarTitleTextCentered: true,
-  	topBarElevationShadowEnabled: true
+    navBarNoBorder: true,
+    navBarSubtitleColor: '#606B74',
+    navBarTitleTextCentered: true,
+    topBarElevationShadowEnabled: true
+  };
+
+  static propTypes = {
+    navigator: PropTypes.object
   };
 
   constructor(props) {
@@ -40,10 +45,10 @@ export default class Login extends Component {
         this.props.navigator.resetTo({
           screen: 'bookie.Home',
           title: 'Bookie'
-        })
+        });
       })
-      .catch((err) => {
-        console.error(err);
+      .catch(err => {
+        console.error(err); // eslint-disable-line
       });
   }
 

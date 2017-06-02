@@ -4,6 +4,7 @@ src/Config.js
 # OSX
 #
 .DS_Store
+.vscode
 
 # Xcode
 #
