@@ -1,5 +1,6 @@
 /* @flow */
 
+// Core
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import {
@@ -11,7 +12,10 @@ import {
   StyleSheet
 } from 'react-native';
 
+// Components
 import Loader from '../components/Loader';
+
+// Config
 import { ACCESS_TOKEN_KEY } from '../Config';
 
 export default class Home extends Component {
@@ -50,7 +54,7 @@ export default class Home extends Component {
         AsyncStorage.getItem(ACCESS_TOKEN_KEY)
           .then(token => {
             if (token) {
-              // Sign in to Firebase and load Home content here
+              // TODO: Sign in to Firebase and load Home content here
               _this.setState({ checkingAuth: false });
               _this.props.navigator.setStyle({
                 navBarHidden: false
@@ -67,7 +71,7 @@ export default class Home extends Component {
             console.error(err); // eslint-disable-line
           });
       } else {
-        // Show Net Disconnected Warning
+        // TODO: Show Net Disconnected Warning
       }
     });
   }
@@ -79,7 +83,7 @@ export default class Home extends Component {
           screen: 'bookie.Login',
           title: 'Login'
         });
-        // Display successfully logged out alert here
+        // TODO: Display successfully logged out alert here
       })
       .catch(err => {
         console.error(err); // eslint-disable-line

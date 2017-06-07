@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">bookie</string>
+    <string name="app_name">Bookie</string>
+    <string name="facebook_app_id">1692478891057975</string>
 </resources>

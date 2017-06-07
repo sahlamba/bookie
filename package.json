@@ -9,9 +9,11 @@
     "lint:fix": "eslint src/ --fix"
   },
   "dependencies": {
+    "firebase": "^4.1.1",
     "prop-types": "^15.5.10",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.2",
+    "react-native-fbsdk": "^0.6.0",
     "react-native-navigation": "^1.1.84"
   },
   "devDependencies": {
