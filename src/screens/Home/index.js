@@ -13,10 +13,10 @@ import {
 } from 'react-native';
 
 // Components
-import Loader from '../components/Loader';
+import Loader from '../../components/Loader';
 
 // Config
-import { ACCESS_TOKEN_KEY } from '../Config';
+import { ACCESS_TOKEN_KEY } from '../../Config';
 
 export default class Home extends Component {
   static navigatorStyle = {

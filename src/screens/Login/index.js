@@ -10,7 +10,7 @@ import FBSDK from 'react-native-fbsdk';
 const { LoginButton, AccessToken } = FBSDK;
 
 // Config
-import { ACCESS_TOKEN_KEY } from '../Config';
+import { ACCESS_TOKEN_KEY } from '../../Config';
 const reqdPermissions = ['email', 'public_profile'];
 
 export default class Login extends Component {
