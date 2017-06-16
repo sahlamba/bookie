@@ -1,27 +1,31 @@
 /* @flow */
+/* eslint-disable no-unused-vars */
 
 // Core
 import React from 'react';
+import { Provider } from 'react-redux';
 
-// 3rd Party
+// Navigation
 import { Navigation } from 'react-native-navigation';
-import { registerScreens } from './src/Screens';
+import { registerScreens } from './src/screens';
 
-// Config
-import { firebaseApp } from './src/Config';
+// Store
+import configureStore from './src/store/configureStore';
+const store = configureStore();
 
-registerScreens();
+registerScreens(store, Provider);
 
+// Common Navigator Styles
 const navigatorStyle = {
   statusBarColor: '#606B74',
   statusBarTextColorScheme: 'dark',
   statusBarBlur: true,
-  navBarHidden: true,
   navBarTextColor: '#303841',
   navBarBackgroundColor: '#FFFFFF',
   navBarButtonColor: '#303841'
 };
 
+// Start App
 Navigation.startSingleScreenApp({
   screen: {
     screen: 'bookie.Home',
