@@ -7,9 +7,6 @@ import React from 'react';
 import { Navigation } from 'react-native-navigation';
 import { registerScreens } from './src/Screens';
 
-// Config
-import { firebaseApp } from './src/Config';
-
 registerScreens();
 
 const navigatorStyle = {
